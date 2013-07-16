@@ -18,17 +18,26 @@
             <div class="hero-unit">
                 <h1>Menta Planta 6</h1>
                 <div id="map"></div>
-                <ul id="controlToggle">
-                <li>
-                    <input type="radio" name="type" value="none" id="noneToggle" onclick="toggleControl(this)" checked="checked">
-                    <label for="noneToggle">navigate</label>
-                </li>
-                <li>
-                    <input type="radio" name="type" value="polygon" id="polygonToggle" onclick="toggleControl(this)">
-                    <label for="polygonToggle">draw polygon</label>
-                </li>
-                <label id="output"></label>
-            </ul>
+
+                <div class="row" style="margin:1em 0">
+                    <div class="span6">
+                        <ul id="controlToggle">
+                        <li>
+                            <input type="radio" name="type" value="none" id="noneToggle" onclick="toggleControl(this)" checked="checked">
+                            <label for="noneToggle">navigate</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="type" value="polygon" id="polygonToggle" onclick="toggleControl(this)">
+                            <label for="polygonToggle">draw polygon</label>
+                        </li>
+                        <label id="output"></label>
+                    </ul></div>
+                    <div class="span3" style="text-align:right">
+                        <button class="btn btn-primary">Enviar Cotización</button>
+                    </div>
+                </div>
+
+            
             </div>
         </div>
 
