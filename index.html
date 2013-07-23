@@ -10,35 +10,197 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/3740b660.main.css">
-        <script src="scripts/vendor/c90b1279.modernizr.js"></script>
+        <link rel="stylesheet" href="styles/b6b9f9d1.main.css">
+        <script src="scripts/vendor/e6e852ee.modernizr.js"></script>
     </head>
     <body>
-        <div class="container">
-            <div class="hero-unit">
-                <h1>Menta Planta 6</h1>
-                <div id="map"></div>
-
-                <div class="row" style="margin:1em 0">
-                    <div class="span6">
-                        <ul id="controlToggle">
-                        <li>
-                            <input type="radio" name="type" value="none" id="noneToggle" onclick="toggleControl(this)" checked="checked">
-                            <label for="noneToggle">navigate</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="type" value="polygon" id="polygonToggle" onclick="toggleControl(this)">
-                            <label for="polygonToggle">draw polygon</label>
-                        </li>
-                        <label id="output"></label>
-                    </ul></div>
-                    <div class="span3" style="text-align:right">
-                        <button class="btn btn-primary">Enviar Cotización</button>
-                    </div>
+        <div class="container-fluid">
+            <!--<div class="row-fluid">
+                <div class="span12">
+                    <h1>One</h1>
                 </div>
+            </div>-->
+            <div class="row-fluid">
+                <div class="span2" id="side-bar">
+                    <div class="accordion" id="accordion2">
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                            Edificio 1
+                          </a>
+                        </div>
+                        <div id="collapseOne" class="accordion-body collapse in">
+                          <div class="accordion-inner">
+                            <ul class="nav nav-pills nav-stacked">
+                              <li class="active">
+                                <a href="#">Planta 1</a>
+                              </li>
+                              <li><a href="#">Planta 2</a></li>
+                              <li><a href="#">Planta 3</a></li>
+                              <li><a href="#">Planta 4</a></li>
+                              <li><a href="#">Planta 5</a></li>
+                              <li><a href="#">Planta 6</a></li>
+                              <li><a href="#">Planta 7</a></li>
+                              <li><a href="#">Planta 8</a></li>
+                              <li><a href="#">Planta 9</a></li>
+                              <li><a href="#">Planta 10</a></li>                              
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                            Edificio 2
+                          </a>
+                        </div>
+                        <div id="collapseTwo" class="accordion-body collapse">
+                          <div class="accordion-inner">
+                            <ul class="nav nav-pills nav-stacked">
+                              <li>
+                                <a href="#">Planta 1</a>
+                              </li>
+                              <li><a href="#">Planta 2</a></li>
+                              <li><a href="#">Planta 3</a></li>
+                              <li><a href="#">Planta 4</a></li>
+                              <li><a href="#">Planta 5</a></li>
+                              <li><a href="#">Planta 6</a></li>
+                              <li><a href="#">Planta 7</a></li>
+                              <li><a href="#">Planta 8</a></li>
+                              <li><a href="#">Planta 9</a></li>
+                              <li><a href="#">Planta 10</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
 
-            
-            </div>
+                    </div>
+                    <div class="accordion" id="videos">
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#videos" href="#collapseVideos">
+                            Videos
+                          </a>
+                        </div>
+                        <div id="collapseVideos" class="accordion-body collapse in">
+                          <div class="accordion-inner">
+                            <a class="various fancybox.iframe" href="http://www.youtube.com/embed/IbGNYiIgoAY?autoplay=1">
+                              <img src="http://img.youtube.com/vi/IbGNYiIgoAY/1.jpg" alt="">
+                            </a>
+                            <a class="various fancybox.iframe" href="http://player.vimeo.com/video/54883844?title=0&amp;byline=0&amp;portrait=0">
+                              <img src="http://b.vimeocdn.com/ts/379/651/379651525_200.jpg" alt="">
+                            </a>
+                            <a class="various fancybox.iframe" href="http://player.vimeo.com/video/54033937?title=0&amp;byline=0&amp;portrait=0">
+                              <img src="http://b.vimeocdn.com/ts/373/478/373478180_200.jpg" alt="">
+                            </a>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>                    
+                </div>
+                <div class="span10" id="main">
+                    <div class="row-fluid" id="separation-container">
+                      <div class="span12">
+                        <ul class="nav nav-tabs" id="myTab">
+                          <li class="active"><a href="#tab1">Selección 1</a></li>
+                          <li><a href="#tab2">+</a></li>                      
+                        </ul>
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="tab1">
+                              <div id="map1" class="map"></div>
+                              <ul id="controlToggle">
+                                <li>
+                                    <input type="radio" name="type" value="none" id="noneToggle" onclick="toggleControl(this)" checked="checked">
+                                    <label for="noneToggle">navigate</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="type" value="polygon" id="polygonToggle" onclick="toggleControl(this)">
+                                    <label for="polygonToggle">draw polygon</label>
+                                </li>
+                            </ul>
+                            <div id="buttons-map">
+                                <p>
+                                    <button class="btn btn-primary btn-block" id="guardar">Guardar</button>
+                                </p>
+                                <p>
+                                    <button class="btn btn-primary btn-block" id="cotizar">Compartir Cotización</button>
+                                </p>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="tab2">
+                              <div id="map2"></div>
+                        
+                          </div>                      
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row-fluid" id="planta-info">
+                        <div class="span5">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Concepto</th>
+                                        <th></th>
+                                        <th>M<sup>2</sup></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Área útil techada</td>
+                                        <td></td>
+                                        <td>404.4m<sup>2</sup></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Área útil terrazas</td>
+                                        <td></td>
+                                        <td>122.9m<sup>2</sup></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Áreas comunes</td>
+                                        <td></td>
+                                        <td>128.4m<sup>2</sup></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Área vendible</td>
+                                        <td>653.9m<sup>2</sup></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Precio por m<sup>2</sup></td>
+                                        <td>$3,671.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Total</td>
+                                        <td><label id="output">$</label></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>
+                                <label id="output"></label>
+                            </p>
+                        </div>
+                        <div class="span7">
+
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <div id="container" style="height: 260px; margin: 0 auto"></div>
+                                </div>
+                                <div class="span6">
+                                    <div id="container2" style="height: 260px; margin: 0 auto"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    
+                    
+                                         
+                </div>
+            </div>        
         </div>
 
         <!--[if lt IE 7]>
@@ -53,7 +215,7 @@
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
 
-        <script src="scripts/3be2bf52.main.js"></script>
+        <script src="scripts/db9cac25.main.js"></script>
 
         <script src="scripts/121395a4.coffee.js"></script>
 
